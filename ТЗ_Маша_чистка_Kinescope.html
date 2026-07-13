@@ -1,0 +1,129 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ТЗ: чистка видеохранилища Kinescope</title><style>
+:root{--ink:#1a1a19;--sec:#52514e;--mut:#898781;--bg:#faf9f6;--card:#fff;--bd:#e6e4dd;--acc:#534AB7;--accbg:#EEEDFE}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:15px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px 80px}
+header{background:linear-gradient(180deg,#26215C,#3C3489);color:#fff;padding:30px 0 24px;margin-bottom:8px}
+header .wrap{padding-bottom:0}
+h1{font-size:25px;font-weight:600;margin:0 0 6px}
+.sub{color:#CECBF6;font-size:15px;margin:0}
+.nav{margin:14px 0 4px}
+.nav a{color:#fff;background:rgba(255,255,255,.15);border-radius:20px;padding:5px 13px;font-size:13px;text-decoration:none;margin-right:8px}
+.nav a:hover{background:rgba(255,255,255,.28)}
+h2{font-size:20px;font-weight:600;margin:34px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--bd)}
+h3{font-size:16px;font-weight:600;margin:22px 0 8px}
+h4{font-size:14px;font-weight:600;margin:16px 0 6px;color:var(--sec)}
+p{margin:8px 0}
+a{color:var(--acc)}
+table{width:100%;border-collapse:collapse;font-size:14px;background:var(--card);border:1px solid var(--bd);border-radius:10px;overflow:hidden;margin:12px 0}
+th,td{padding:8px 11px;text-align:left;border-bottom:1px solid var(--bd);vertical-align:top}
+th{background:#f3f1ea;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.02em;color:var(--sec)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:14px 0;padding:12px 16px;background:var(--accbg);border-left:4px solid var(--acc);border-radius:0 8px 8px 0;color:#3C3489}
+code{background:#f0eee7;padding:1px 6px;border-radius:5px;font-family:ui-monospace,Consolas,monospace;font-size:13px}
+pre{background:#2C2C2A;color:#f3f1ea;padding:14px;border-radius:8px;overflow:auto}
+pre code{background:none;color:inherit;padding:0}
+ul,ol{margin:8px 0;padding-left:24px}
+li{margin:5px 0}
+ul.task{list-style:none;padding-left:4px}
+ul.task li{display:flex;align-items:flex-start;gap:8px}
+ul.task input{margin-top:4px}
+hr{border:none;border-top:1px solid var(--bd);margin:26px 0}
+footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--bd);font-size:12px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}
+.doc{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:20px;text-decoration:none;color:inherit;display:block;transition:.15s}
+.doc:hover{border-color:var(--acc);box-shadow:0 4px 14px rgba(83,74,183,.12)}
+.doc .ic{font-size:26px}
+.doc .t{font-size:17px;font-weight:600;margin:8px 0 4px;color:var(--acc)}
+.doc .d{font-size:13px;color:var(--sec)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:20px 0}
+.kpi{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 14px}
+.kpi .v{font-size:22px;font-weight:600;color:var(--acc)}
+.kpi .l{font-size:12px;color:var(--mut);text-transform:uppercase}
+</style></head><body>
+<header><div class="wrap"><h1>ТЗ: чистка видеохранилища Kinescope</h1><p class="sub">Задача для Маши Конновой · срок до 31.07.2026</p><div class="nav"><a href="index.html">📁 Все документы</a><a href="Ревизия_Kinescope_2026-07-13.html">📊 Отчёт</a><a href="ТЗ_Маша_чистка_Kinescope.html">📋 ТЗ</a><a href="Этап1_онлайны_список.html">🟢 Этап 1</a></div></div></header>
+<div class="wrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Исполнитель</strong></td><td>Маша Коннова</td></tr><tr><td><strong>Постановщик</strong></td><td>Ольга</td></tr><tr><td><strong>Срок</strong></td><td>до конца месяца — <strong>31.07.2026</strong></td></tr><tr><td><strong>Статус</strong></td><td>Этап 1 в работе</td></tr><tr><td><strong>Дата ТЗ</strong></td><td>13.07.2026</td></tr></tbody></table>
+<hr>
+<h2>Зачем это делаем (цель)</h2>
+<p>Хранилище разрослось до <strong>11.12 ТБ / 5903 видео</strong>, и мы платим за Kinescope <strong>более 30 000 ₽/мес</strong>. За годы накопились дубликаты, старые записи живых эфиров, неактуальный контент, битые файлы.</p>
+<p><strong>Цель — навести порядок и снизить оплату минимум в 2 раза.</strong></p>
+<p>Работаем <strong>поэтапно</strong> и <strong>со сверкой</strong>: ничего не удаляем массово, каждый блок проходим по списку и фиксируем, сколько освободили.</p>
+<hr>
+<h2>Что сейчас в хранилище (факты на 13.07.2026)</h2>
+<table><thead><tr><th>Показатель</th><th>Значение</th></tr></thead><tbody><tr><td>Общий объём</td><td><strong>11 389 ГБ ≈ 11.12 ТБ</strong></td></tr><tr><td>Видео</td><td>5 903</td></tr><tr><td>Проектов / папок</td><td>18 / 620</td></tr><tr><td>Длительность</td><td>6 514 часов</td></tr></tbody></table>
+<p><strong>По годам загрузки:</strong></p>
+<ul>
+<li><strong>2023 — 7 624 ГБ (67%)</strong> — в основном разовый перенос старого архива с Vimeo (проект «VIMEO import»)</li>
+<li>2024 — 2 270 ГБ (20%)</li>
+<li>2025 — 887 ГБ (8%)</li>
+<li>2026 — 608 ГБ (5%)</li>
+</ul>
+<p>Полная детализация — в файле <strong><code>Ревизия_Kinescope_2026-07-13.html</code></strong> (открыть двойным кликом в браузере): все проекты, папки, дубликаты, фильтр.</p>
+<hr>
+<h2>⚠️ ВАЖНО про тариф — прочитать до удаления</h2>
+<p>Как устроена оплата Kinescope (проверено на kinescope.ru):</p>
+<ul>
+<li>Тарифа «за терабайт» <strong>нет</strong>. На платном плане Super — <strong>оплата по факту (pay-as-you-go)</strong>: счёт = <strong>хранение + трафик (просмотры) + транскодинг</strong>.</li>
+<li>Удаление видео снижает строку <strong>«хранение»</strong> линейно: удалили X ГБ → минус X ГБ × ставку (ориентир 1,5–1,9 ₽/ГБ, а с учётом оригиналов — вдвое больше).</li>
+<li><strong>Трафик (просмотры) удаление почти не уменьшает</strong> — только по удалённым роликам.</li>
+</ul>
+<p><strong>Два действия ДО массового удаления (могут дать половину экономии сами по себе):</strong></p>
+<ol>
+<li><strong>Открыть разбивку счёта в личном кабинете Kinescope</strong> — посмотреть, за что именно платим: за хранение или за трафик.</li>
+</ol>
+<ul>
+<li>Если основное — <strong>хранение</strong> → удаление и п.2 ниже реально снизят счёт в 2 раза.</li>
+<li>Если основное — <strong>трафик</strong> → удаление почти не поможет, тогда стратегия другая (работать с качеством и самыми просматриваемыми видео). <em>Это должна проверить Ольга.</em></li>
+</ul>
+<ol>
+<li><strong>Написать в поддержку Kinescope (hello@kinescope.ru / +7 499 110-01-91) с просьбой отключить хранение оригиналов.</strong> Kinescope по умолчанию хранит исходник <strong>плюс</strong> все качества (360/480/720/1080p) — это удваивает объём. Отключение оригиналов освобождает <strong>~50% хранения без удаления единого опубликованного видео.</strong> Это самый быстрый и безопасный рычаг. <em>Согласовать с Ольгой перед запросом.</em></li>
+</ol>
+<hr>
+<h2>🔒 Правила безопасности (обязательно)</h2>
+<ol>
+<li><strong>Ничего не удалять без подтверждения Ольги.</strong> Списки ниже — это <strong>кандидаты</strong>, а не команда на снос.</li>
+<li><strong>Перед удалением проверить, не встроено ли видео в действующий курс</strong> (GetCourse / Tilda / активные программы). Если видео используется в курсе, который сейчас продаётся или проходят студенты — <strong>удаление сломает урок</strong>. Такие не трогаем.</li>
+<li>Удаляем <strong>поэтапно</strong>, блок за блоком. После каждого блока — сверка: сколько ГБ освободили, отметки в чек-листе.</li>
+<li>Сомневаешься — <strong>не удаляй, спроси Ольгу.</strong></li>
+<li>Начинаем со <strong>старого и заведомо неактуального</strong> (живые эфиры прошлых потоков), а не с текущего контента.</li>
+</ol>
+<hr>
+<h2>Этапы работы</h2>
+<h3>🟢 Этап 1 — Онлайн-сессии (в работе)</h3>
+<p>Удаляем записи <strong>живых онлайнов</strong>: вопрос-ответы с преподавателем, Zoom-сессии, онлайны с преподавателем, разборы, супервизии, мастер-группы, вебинары, практикумы, записи по группам/потокам (гр. №, «суббота» и т.п.). Это записи эфиров прошлых потоков — как правило, уже неактуальны.</p>
+<p><strong>Как отличить онлайн:</strong></p>
+<ul>
+<li>по <strong>названию</strong> — есть слова: вопрос-ответ, Zoom/зум, эфир, разбор, супервизия, мастер-группа, онлайн, демосессия, вебинар, «работа с запросами клиентов», практикум, «группа N / гр.N», суббота;</li>
+<li>по <strong>длительности</strong> — запись <strong>≥ 2 часов</strong> почти всегда живой эфир (1,5–2 ч — вероятно тоже; но встречаются длинные лекции — их проверяем глазами, не удаляем вслепую).</li>
+</ul>
+<p>📄 <strong>Конкретный список — в файле <code>Этап1_онлайны_список.md</code></strong> (с чекбоксами для сверки). Там всё разложено по уровням достоверности:</p>
+<ul>
+<li><strong>A. Точно онлайны</strong> (~219 видео / ~571 ГБ) — целые проекты-онлайны: «Разборы Ярослав Zoom», «Вебинары МЧИ», «Вебинары ППК», «Банк демосессий», «Сексология/Практикумы» (вместе ~429 ГБ) + папки, названные как живые сессии («Вопрос-Ответ», эфиры, супервизии) внутри курсов (~142 ГБ);</li>
+<li><strong>VIMEO import</strong> (архив ~6.5 ТБ) — старые живые программы (Фаза Роста, ПЖ 1.0, «Годовая»); Ольга проходит по крупным папкам и отмечает, что не нужно;</li>
+<li><strong>B. Онлайны в смешанных папках</strong> (1246 видео / ~2.36 ТБ) — точечная зачистка; сюда же попадают практикумы и записи по группам — проверять, не действующий ли это курс;</li>
+<li><strong>C. Длинные ≥2ч на проверку</strong> (695 видео / ~1.75 ТБ) — вручную, там есть и лекции.</li>
+</ul>
+<p><strong>Порядок:</strong> A1 → A2 → VIMEO import → B → C. После каждого блока — сверка.</p>
+<h3>🟡 Этап 2 — Дубликаты и копии</h3>
+<p>После онлайнов чистим дубли (детали и раскрытие групп — в HTML-отчёте, раздел «Точные дубли» и «Маркеры»):</p>
+<ul>
+<li><strong>Точные копии по хешу (md5)</strong> — 62 группы / ~153 ГБ. Побайтово одинаковые файлы, залитые дважды (часто один урок лежит и в «ППК 2.0», и в «Сексологии»). Оставляем одну копию, остальные удаляем.</li>
+<li><strong>Явные пометки в названиях</strong> — <code>[COPY]</code> (22), <code>НЕАКТУАЛЬНО</code> (42), <code>ДУБЛИК</code>, <code>тест</code> (6), «Видео N» (10). Самые очевидные.</li>
+<li><strong>Похожие по названию+длительности</strong> — 71 группа / до ~113 ГБ (перезаливы). Проверяем вручную.</li>
+<li><strong>Битые/незавершённые</strong> — 6 <code>error</code>, 19 <code>suspended</code>, 21 файл по 0 байт. Удаляются без потери контента.</li>
+</ul>
+<h3>🔴 Этап 3 — Актуальное vs старое (совместно)</h3>
+<p>Разбираем оставшийся контент вместе с Ольгой: что оставляем (актуальные курсы), что архивируем/удаляем (старые потоки, снятые с продажи программы). Этот этап <strong>делаем вдвоём</strong>, не самостоятельно.</p>
+<hr>
+<h2>Как сверяемся</h2>
+<ul>
+<li>Файл <code>Этап1_онлайны_список.md</code> — чек-лист с <code>[ ]</code>. По мере удаления ставим <code>[x]</code>.</li>
+<li>После каждого блока пишем в отчёте: <strong>сколько ГБ было / стало / освободили</strong>.</li>
+<li>Ведём общий счётчик: сколько ТБ убрали от стартовых 11.12 ТБ и как изменился счёт.</li>
+</ul>
+<hr>
+<h2>Файлы</h2>
+<table><thead><tr><th>Файл</th><th>Что это</th></tr></thead><tbody><tr><td><code>Ревизия_Kinescope_2026-07-13.html</code></td><td>Полный отчёт-ревизия: проекты, папки, дубли, фильтр</td></tr><tr><td><code>Этап1_онлайны_список.md</code></td><td>Список онлайнов на удаление (чек-лист)</td></tr><tr><td><code>ТЗ_Маша_чистка_Kinescope.md</code></td><td>Этот файл — постановка задачи</td></tr></tbody></table>
+<p><em>Доступ к Kinescope (API-ключ) хранится у Ольги в защищённом виде и в этих документах не публикуется.</em></p>
+<footer>Ревизия Kinescope · ОИПП · 13.07.2026 · доступ к API-ключу в документах не публикуется.</footer>
+</div></body></html>
